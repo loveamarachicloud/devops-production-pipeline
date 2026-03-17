@@ -1,4 +1,4 @@
-Dockerized application deployed on Kubernetes with automated CI/CD pipeline using GitHub Actions and Docker Hub.
+
 ## Application Running in Kubernetes
 
 The application is deployed to a local Kubernetes cluster using Minikube and exposed through a Kubernetes Service.
