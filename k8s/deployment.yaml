@@ -14,7 +14,6 @@ spec:
     spec:
       containers:
         - name: devops-pipeline-app
-          image: devops-pipeline-app
-          imagePullPolicy: Never
+          image: loveamarachicloud/devops-pipeline-app:latest
           ports:
             - containerPort: 80
