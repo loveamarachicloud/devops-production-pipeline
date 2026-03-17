@@ -49,18 +49,22 @@ User → Kubernetes Service → Pods → Docker Container (Nginx Web App)
 
 ## Quick Start
 
-### 1. Start Minikube
+### 1 Start Minikube
 ```bash
-minikube start
-### 2. Build Docker Image
-docker build -f docker/Dockerfile -t devops-pipeline-app .
-### 3. Deploy to Kubernetes
-kubectl apply -f k8s/deployment.yaml
-kubectl apply -f k8s/service.yaml
-### 4. Verify Pods
-kubectl get pods
-### 5. Access the Application
-minikube service nginx-service
+minikube start```
+### 2 Build Docker Image
+```bash
+docker build -f docker/Dockerfile -t devops-pipeline-app .```
+### 3 Deploy to Kubernetes
+```bash
+kubectl apply -f k8s/deployment.yaml```
+kubectl apply -f k8s/service.yaml```
+### 4 Verify Pods
+```bash
+kubectl get pods```
+### 5 Access the Application
+```bash
+minikube service nginx-service```
 ## Application Running in Kubernetes
 
 The application is deployed to a local Kubernetes cluster using Minikube and exposed through a Kubernetes Service.
