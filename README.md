@@ -134,11 +134,13 @@ Port already in use
 
 Run container on a different port:
 docker run -p 8081:80 devops-pipeline-app
+````
 ## Check pod logs
 kubectl logs <pod-name>
 ## Restart deployment
 kubectl rollout restart deployment devops-pipeline-app
 ```md
+````
 ## What I Learned
 
 - How to containerize applications using Docker
