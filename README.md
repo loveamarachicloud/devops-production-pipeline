@@ -131,6 +131,7 @@ Ensure your Docker image is available locally:
 ```bash
 minikube image load devops-pipeline-app
 Port already in use
+```
 
 Run container on a different port:
 docker run -p 8081:80 devops-pipeline-app
