@@ -140,7 +140,7 @@ kubectl logs <pod-name>
 ## Restart deployment
 kubectl rollout restart deployment devops-pipeline-app
 ```md
-````
+
 ## What I Learned
 
 - How to containerize applications using Docker
