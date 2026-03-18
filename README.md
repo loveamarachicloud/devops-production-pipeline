@@ -1,4 +1,8 @@
 # DevOps Production Pipeline
+![Docker](https://img.shields.io/badge/Docker-Containerized-blue)
+![Kubernetes](https://img.shields.io/badge/Kubernetes-Orchestration-blue)
+![CI/CD](https://img.shields.io/badge/CI/CD-GitHub_Actions-green)
+![Status](https://img.shields.io/badge/Status-Completed-success)
 
 Dockerized application deployed on Kubernetes with automated CI/CD pipeline using GitHub Actions and Docker Hub.
 
@@ -20,7 +24,7 @@ It covers:
 
 ## Architecture
 
-User → Kubernetes Service → Pods → Docker Container (Nginx Web App)
+![Architecture Diagram](screenshots/architecture.png)
 
 ---
 
@@ -49,24 +53,24 @@ User → Kubernetes Service → Pods → Docker Container (Nginx Web App)
 
 ## Quick Start
 
-### 1 Start Minikube
+### 1. Start Minikube
 ```bash
 minikube start
 ```
-### 2 Build Docker Image
+### 2. Build Docker Image
 ```bash
 docker build -f docker/Dockerfile -t devops-pipeline-app .
 ```
-### 3 Deploy to Kubernetes
+### 3. Deploy to Kubernetes
 ```bash
 kubectl apply -f k8s/deployment.yaml```
 kubectl apply -f k8s/service.yaml
 ```
-### 4 Verify Pods
+### 4. Verify Pods
 ```bash
 kubectl get pods
 ```
-### 5 Access the Application
+### 5. Access the Application
 ```bash
 minikube service nginx-service
 ```
@@ -75,14 +79,19 @@ minikube service nginx-service
 The application is deployed to a local Kubernetes cluster using Minikube and exposed through a Kubernetes Service.
 ## CI/CD Pipeline
 
-This project uses GitHub Actions to automate:
+This project uses GitHub Actions to automate the deployment workflow.
 
-Docker image build
+Pipeline stages:
 
-Image push to Docker Hub
+- Build Docker image
+- Push image to Docker Hub
+- Prepare for Kubernetes deployment
 
-Workflow location:
-.github/workflows/
+Workflow file:
+
+```bash
+.github/workflows/docker-build.yml
+```
 
 ## Project Roadmap
 
