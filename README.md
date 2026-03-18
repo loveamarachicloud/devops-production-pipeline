@@ -3,7 +3,12 @@
 ![Kubernetes](https://img.shields.io/badge/Kubernetes-Orchestration-blue)
 ![CI/CD](https://img.shields.io/badge/CI/CD-GitHub_Actions-green)
 ![Status](https://img.shields.io/badge/Status-Completed-success)
+## Project Highlights
 
+- End-to-end DevOps pipeline implementation
+- Containerized application deployed on Kubernetes
+- CI/CD automation using GitHub Actions
+- Real-world troubleshooting and scaling scenarios
 Dockerized application deployed on Kubernetes with automated CI/CD pipeline using GitHub Actions and Docker Hub.
 
 ---
@@ -57,6 +62,14 @@ It covers:
 ```bash
 minikube start
 ```
+## Live Demo
+
+After deployment, access the application using:
+
+```bash
+minikube service nginx-service
+```
+This will open the application in your browser.
 ### 2. Build Docker Image
 ```bash
 docker build -f docker/Dockerfile -t devops-pipeline-app .
@@ -108,3 +121,29 @@ Add Grafana dashboards
 Improve CI/CD pipeline with testing and validation
 
 Add troubleshooting and operational documentation
+```md
+## Troubleshooting
+
+### Pods stuck in ImagePullBackOff
+
+Ensure your Docker image is available locally:
+
+```bash
+minikube image load devops-pipeline-app
+Port already in use
+
+Run container on a different port:
+docker run -p 8081:80 devops-pipeline-app
+## Check pod logs
+kubectl logs <pod-name>
+## Restart deployment
+kubectl rollout restart deployment devops-pipeline-app
+```md
+## What I Learned
+
+- How to containerize applications using Docker
+- How Kubernetes manages deployments and scaling
+- How services expose applications inside a cluster
+- How to debug common Kubernetes issues
+- How to build a CI/CD pipeline using GitHub Actions
+- How to push and manage images in Docker Hub
