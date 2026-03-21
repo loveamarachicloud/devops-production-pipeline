@@ -124,7 +124,8 @@ Add troubleshooting and operational documentation
 ```md
 ## Troubleshooting
 
-### Pods stuck in ImagePullBackOff
+## Pods stuck in ImagePullBackOff
+```
 
 Ensure your Docker image is available locally:
 
@@ -150,3 +151,11 @@ kubectl rollout restart deployment devops-pipeline-app
 - How to debug common Kubernetes issues
 - How to build a CI/CD pipeline using GitHub Actions
 - How to push and manage images in Docker Hub
+## Helm Deployment
+
+This project includes a Helm chart for packaging and deploying the application to Kubernetes.
+
+### Install with Helm
+
+```bash
+helm install devops-app ./helm/devops-app
