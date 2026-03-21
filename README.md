@@ -3,7 +3,8 @@
 ![Helm](https://img.shields.io/badge/Helm-Packaging-blue)
 ![CI/CD](https://img.shields.io/badge/CI/CD-GitHub%20Actions-blue)
 ![Monitoring](https://img.shields.io/badge/Monitoring-Prometheus%20%7C%20Grafana-blue)
-DevOps Production Pipeline
+
+## DevOps Production Pipeline
 
 Dockerized application deployed on Kubernetes with automated CI/CD pipeline using GitHub Actions, Helm, Docker Hub, and monitoring with Prometheus and Grafana.
 
