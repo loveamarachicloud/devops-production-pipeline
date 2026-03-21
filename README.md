@@ -4,7 +4,7 @@
 ![CI/CD](https://img.shields.io/badge/CI/CD-GitHub%20Actions-blue)
 ![Monitoring](https://img.shields.io/badge/Monitoring-Prometheus%20%7C%20Grafana-blue)
 
-## DevOps Production Pipeline
+##DevOps Production Pipeline
 
 Dockerized application deployed on Kubernetes with automated CI/CD pipeline using GitHub Actions, Helm, Docker Hub, and monitoring with Prometheus and Grafana.
 
@@ -50,6 +50,11 @@ User → Kubernetes Service → Pods → Docker Container (Nginx App)
 ```bash
 minikube start
 ```
+## Application Running in Kubernetes
+
+The application is deployed to Kubernetes and exposed via a service.
+
+![Kubernetes App](screenshots/kubernetes-app-running.png)
 ### 2. Build Docker Image
 ```bash
 docker build -f docker/Dockerfile -t devops-pipeline-app .
@@ -58,6 +63,7 @@ docker build -f docker/Dockerfile -t devops-pipeline-app .
 ```bash
 helm install devops-app ./helm/devops-app
 ```
+![Helm Deployment](screenshots/helm-deployment.png)
 ### 4. Verify Deployment
 ```bash
 kubectl get pods
@@ -95,6 +101,7 @@ Monitoring is implemented using Prometheus and Grafana.
 ```bash
 C:\minikube\minikube.exe service monitoring-grafana --url
 ```
+![Grafana Dashboard](screenshots/grafana-dashboard.png)
 ## Grafana Features
 
 Kubernetes cluster monitoring
