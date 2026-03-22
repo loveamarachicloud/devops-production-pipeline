@@ -63,6 +63,7 @@ docker build -f docker/Dockerfile -t devops-pipeline-app .
 ```bash
 helm install devops-app ./helm/devops-app
 ```
+
 ![Helm Deployment](screenshots/helm-deployment.png)
 ### 4. Verify Deployment
 ```bash
@@ -101,6 +102,7 @@ Monitoring is implemented using Prometheus and Grafana.
 ```bash
 C:\minikube\minikube.exe service monitoring-grafana --url
 ```
+
 ![Grafana Dashboard](screenshots/grafana-dashboard.png)
 ## Grafana Features
 
@@ -115,3 +117,15 @@ Pod and node metrics
 - Add advanced Helm configurations (values per environment)
 - Improve CI/CD with automated testing stage
 - Enhance monitoring with custom Grafana dashboards
+## Multi-Environment Helm Deployment
+
+This project supports environment-specific deployments using Helm.
+
+### Dev deployment
+
+```bash
+helm install devops-app-dev ./helm/devops-app -f ./helm/devops-app/values-dev.yaml
+```
+### Prod deployment
+helm install devops-app-prod ./helm/devops-app -f ./helm/devops-app/values-prod.yaml
+This setup allows different deployment configurations across environments, such as replica counts for development and production.
