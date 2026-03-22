@@ -129,3 +129,10 @@ helm install devops-app-dev ./helm/devops-app -f ./helm/devops-app/values-dev.ya
 ### Prod deployment
 helm install devops-app-prod ./helm/devops-app -f ./helm/devops-app/values-prod.yaml
 This setup allows different deployment configurations across environments, such as replica counts for development and production.
+## GitOps with Argo CD
+
+Argo CD is used to implement GitOps-based deployment.
+
+It continuously monitors the Git repository and synchronizes Kubernetes resources automatically.
+
+![Argo CD Dashboard](screenshots/argocd-dashboard.png)
