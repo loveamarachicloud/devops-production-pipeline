@@ -136,3 +136,10 @@ Argo CD is used to implement GitOps-based deployment.
 It continuously monitors the Git repository and synchronizes Kubernetes resources automatically.
 
 ![Argo CD Dashboard](screenshots/argocd-dashboard.png)
+## GitOps Deployment Validation
+
+A change in the Git repository automatically updates the Kubernetes deployment via Argo CD.
+
+In this example, the replica count was updated from 1 to 2 in the values file, and Argo CD synchronized the change to the cluster.
+
+![GitOps Replica Update](screenshots/gitops-replica-update.png)
