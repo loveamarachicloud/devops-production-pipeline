@@ -143,3 +143,10 @@ A change in the Git repository automatically updates the Kubernetes deployment v
 In this example, the replica count was updated from 1 to 2 in the values file, and Argo CD synchronized the change to the cluster.
 
 ![GitOps Replica Update](screenshots/gitops-replica-update.png)
+## AWS Deployment
+
+The application is deployed on an AWS EC2 instance using Docker and exposed via a public IP.
+
+This demonstrates cloud deployment outside the local Kubernetes environment.
+
+![AWS Deployment](screenshots/aws-live-app.png)
