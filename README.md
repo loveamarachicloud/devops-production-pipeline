@@ -150,3 +150,4 @@ The application is deployed on an AWS EC2 instance using Docker and exposed via 
 This demonstrates cloud deployment outside the local Kubernetes environment.
 
 ![AWS Deployment](screenshots/aws-live-app.png)
+
